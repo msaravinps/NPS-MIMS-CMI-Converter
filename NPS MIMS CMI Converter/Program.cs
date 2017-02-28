@@ -32,8 +32,6 @@ namespace NPS_MIMS_CMI_Converter
                 _CsvGenerator.AddRecord(new string[] { cmiCode, xmlFileContents, escapedXmlFileContents });
                 Console.WriteLine(cmiCode + " finished, %" + Math.Round(progress * 100 / total, 1).ToString());
                 progress++;
-                if (progress > 3)
-                    break;        
             }
             _CsvGenerator.End();
         }
